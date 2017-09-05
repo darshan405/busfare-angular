@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchCardInterface } from './search-card.interface';
+import { SearchCardInterface } from './search.interface';
 
 @Component({
   selector: 'app-search-card',

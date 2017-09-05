@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { SearchCardInterface } from './search-card.interface';
+import { SearchCardInterface } from './search.interface';
 
 @Injectable()
 export class SearchCardService {
@@ -8,6 +8,7 @@ export class SearchCardService {
   constructor() { }
 
   getSearchResults(model: SearchCardInterface) {
- }
+    console.log(model);
+  }
 
 }
