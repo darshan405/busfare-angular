@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {HttpClientModule} from '@angular/common/http';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCardModule, MdDatepickerModule, MdInputModule, MdNativeDateModule, MdRadioModule,
    MdToolbarModule } from '@angular/material';
@@ -18,6 +20,7 @@ import { SearchCardComponent } from './search-card.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     MdButtonModule,
     MdCardModule,
     MdDatepickerModule,
