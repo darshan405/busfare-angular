@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
+import {SearchService} from './search.service';
 
 import { SearchCardInterface } from './search-card.interface';
-import {SearchService} from './search.service';
 
 @Component({
   selector: 'app-search-card',
   templateUrl: './search-card.component.html',
   styleUrls: ['./search-card.component.css'],
-  providers: [SearchService]
 })
 export class SearchCardComponent implements OnInit {
   model: SearchCardInterface;

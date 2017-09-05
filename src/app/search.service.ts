@@ -1,10 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
 import { HttpClient } from '@angular/common/http';
 
 import { SearchCardInterface } from './search-card.interface';
 
 @Injectable()
 export class SearchService {
+
+  // Observable source
+  private resultSource = new Subject<any>();
+
+  // Observable stream
+  result$ = this.resultSource.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -21,7 +28,9 @@ export class SearchService {
       dateofarrival: this.formatDate(model.arrivalDate)
     }
     const url = `${baseUrl}${endpoint}?${this.objToUrlParams(params)}`;
-    console.log(url);
+    this.http.get(url).subscribe(data => {
+      this.resultSource.next(data['data']);
+    });
   }
 
   // This is an util method to return YYYYMMDD date string
