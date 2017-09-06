@@ -8,10 +8,10 @@ import { SearchCardInterface } from './search-card.interface';
 export class SearchService {
 
   // Observable source
-  private resultSource = new Subject<any>();
+  private resultsSource = new Subject<any>();
 
   // Observable stream
-  result$ = this.resultSource.asObservable();
+  results$ = this.resultsSource.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -29,7 +29,7 @@ export class SearchService {
     }
     const url = `${baseUrl}${endpoint}?${this.objToUrlParams(params)}`;
     this.http.get(url).subscribe(data => {
-      this.resultSource.next(data['data']);
+      this.resultsSource.next(data['data']);
     });
   }
 
