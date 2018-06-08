@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SearchService} from './search.service';
-
+import { Router } from '@angular/router';
 import { SearchCardInterface } from './search-card.interface';
 
 @Component({
@@ -11,7 +11,7 @@ import { SearchCardInterface } from './search-card.interface';
 export class SearchCardComponent implements OnInit {
   model: SearchCardInterface;
 
-  constructor(private service: SearchService) { }
+  constructor(private service: SearchService,private router: Router) { }
 
   ngOnInit() {
     this.model = {tripType: '0', origin: 'Bangalore', destination: 'Hyderabad', departureDate: new Date(),

@@ -1,4 +1,34 @@
+/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
 .bus-ticket-card{
-    width: 400px;
-    margin: 24px auto;
+  width: 400px;
+  margin: 24px auto;
+}
+.bg-color{
+  background-color:white;
+}
+.navbar-custom{
+  margin-top:-46px;
+}
+.color-custom a{
+  font-size:18px;
+  color:black ! important;
+  margin-top:4px;
+}
+.busimage-edit{
+  height:37px;
+  width:105px;
+}
+.navbar-edit{
+  background-color:#80ffff;
+}
+#mgn-rt{
+  margin-right: 20px;
+}
+#mgn-ryt{
+  margin-right: 5px;
+}
+.hi{ 
+  margin-top: -6px;
+  height: 700px;
+  margin-bottom: -19px;
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SearchService} from './search.service';
 import { Subscription } from 'rxjs/Subscription';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-search-result',
   templateUrl: './search-result.component.html',
@@ -11,7 +11,7 @@ export class SearchResultComponent implements OnInit {
   subscription: Subscription;
   results: object;
 
-  constructor(private service: SearchService) {
+  constructor(private service: SearchService,private router: Router) {
     this.subscription = service.results$.subscribe(results => {
       this.results = results;
     })

@@ -32,15 +32,12 @@ export class SearchService {
       this.resultsSource.next(data['data']);
     });
   }
-
-  // This is an util method to return YYYYMMDD date string
   formatDate(date: Date): string {
-    const mm = date.getMonth() + 1; // getMonth is zero indexed
+    const mm = date.getMonth() + 1; 
     const dd = date.getDate();
     return `${date.getFullYear()}${ mm > 9 ? mm : '0' + mm}${dd > 9 ? dd : '0' + dd}`;
   }
 
-  // This is a method to convert a dictionary to url param string
   objToUrlParams(params): string {
     let toret = '';
     for (const key in params) {
