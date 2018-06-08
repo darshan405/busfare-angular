@@ -13,9 +13,9 @@ import { SearchCardComponent } from './search-card.component';
 import { SearchResultComponent } from './search-result.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'search-card', pathMatch: 'full' },
-  { path: 'search-card', component: SearchCardComponent },
-  { path: 'result-card', component: SearchResultComponent }
+  { path: '', redirectTo: 'search-card', pathMatch: 'full' }
+  // { path: 'search-card', component: SearchCardComponent }
+  // { path: 'result-card', component: SearchResultComponent }
   ];
 
 @NgModule({
