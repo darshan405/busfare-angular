@@ -1,0 +1,83 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-edit">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>                        
+    </button>
+    <a class="navbar-brand" href="#"> <img class="img-responsive busimage-edit" src="./assets/bus1.png"></a>
+  </div>
+  <div class="collapse navbar-collapse navbar-custom" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="color-custom"><a (click)="router.navigate(['/sign-up'])">Singup</a></li>
+    </ul> 
+  </div>
+</nav><br>
+<br>
+<br>
+<div class="container background" [ngStyle]="{'background' : 'url(./assets/bus4.JPG)'}">
+<div class="row">
+<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3">
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="row">
+<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 ">
+
+</div>
+</div>
+<form #detailForm="ngForm" (ngSubmit)="onSubmit(detailForm)">
+<div class="row row-custom">
+          <div class="col-sm-2 col-md-2 col-xs-12 col-lg-2"></div>
+          <div class="col-sm-8 col-md-8 col-xs-12 col-lg-8">
+          
+            <div class="form-group">
+            
+              <input type="emailLogIn" class="form-control margin-pop bk"  placeholder="Email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required 
+              name="emailLogIn" [ngStyle]="{'background' : 'url(./assets/close-envelope.png)'}"
+              [(ngModel)]="emailLogIn" #emailLogInRef="ngModel" required
+              [ngClass]="(emailLogInRef.invalid && emailLogInRef.touched) ? 'red' : ''">
+              <p *ngIf="(emailLogInRef.invalid && emailLogInRef.touched)">Email is Required</p>
+             
+            </div>
+          </div>
+          </div>
+        <div class="row row-custom1">
+          <div class="col-sm-2 col-md-2 col-xs-12 col-lg-2"></div>
+          <div class="col-sm-8 col-md-8 col-xs-12 col-lg-8">
+            <div class="form-group">
+              <input type="passwordLogIn" class="form-control margin-pop bk"  placeholder="Password" name="password" [ngStyle]="{'background' : 'url(./assets/Lock_Green.png)'}"
+              [(ngModel)]="passwordLogIn" #passwordLogInRef="ngModel" required
+              [ngClass]="(passwordLogInRef.invalid && passwordLogInRef.touched) ? 'red' : ''">
+              <p *ngIf="(passwordLogInRef.invalid && passwordLogInRef.touched)">password is Required</p>
+            </div>
+          </div>
+        </div> 
+        <button class="btn btn-success button-custom" (click)="mySaveLogIn()">LogIn</button> 
+        <button (click)="router.navigate(['/sign-up'])" class="btn btn-success bt-custom">Back</button>  
+        </form>
+
+</div>
+<div class="col-md-3 col-sm-3 col-xs-3 col-lg-3">
+</div>
+</div>
+</div>
+ <br>
+  <footer>
+  <div class="foot-fix">
+    <div class="container con-fix">
+      <div class="row last">
+        <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+          <ul>
+            <li>Privacy Police</li>
+            <li>User Agreement</li>
+            <li class="last-check">About</li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+          <footer> &copy; COPYRIGHT CDDV.ALL RIGHTS RESERVED</footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+

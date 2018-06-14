@@ -1,0 +1,60 @@
+.bg-color{
+  background-color:white;
+}
+.navbar-custom{
+  margin-top:-46px;
+}
+.color-custom a{
+  font-size:18px;
+  color:black ! important;
+  margin-top:4px;
+}
+.busimage-edit{
+  height:37px;
+  width:105px;
+}
+.navbar-edit{
+  background-color:#80ffff;
+}
+.background-text{
+ background-color:#80ffff;
+ 
+}
+.heading-edit{
+  text-align:center;
+  color:black;
+}
+.para-edit{
+  line-height:20px;
+  color:black;
+  font-size:16px;
+}
+.image-fix{
+  width:100%;
+  margin-top:-5px;
+}
+.image-custom{
+  height: 218px;
+  margin-top: 36px;
+  width: 577px;
+}
+.last{
+  background-color:#ccffff!important; 
+  padding:50px;
+}
+.last ul li{
+  display:inline;
+  padding:5px;
+}
+.last-check{
+  color:#009788;
+}
+@media only screen and (min-width: 1200px){
+  footer {
+    height: 50px;
+    }}
+    @media only screen and (min-width: 1200px){
+      .con-fix {
+        width:1700px;
+        }}
+        
